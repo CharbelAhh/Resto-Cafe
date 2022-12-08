@@ -5,8 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resto</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src=https://kit.fontawesome.com/4b8995fc18.js crossorigin=anonymous></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 <body>
+    <header class="nav p-2 overflow-hidden flex-row justify-content-evenly align-items-center fixed-top">
+        <div class="text-white flex-row align-items-center title">
+            <h1 class="m-0 fw-bold"><i class="fa fa-coffee"></i> Resto</h1>
+        </div>
+        <div class="nav-lg">
+            <ul class="m-0 d-flex flex-row">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="container-xxl d-flex flex-column align-items-center text-center justify-content-center">
+            <div class="container title">
+                <h1>Resto Café</h1>
+                <h2>We make coffee, And we make a smile.</h2>
+            </div>
+            <div class="container">
+                <a href="#menu" class="btn border-light position-relative top-100 text-white"><i class="fa fa-angle-down"></i> Show Menu</a>
+            </div>
+        </section>
+        <section id="menu" class="d-flex flex-column justify-content-center">
+            <div class="container mb-5 title text-center">
+                <h1>Menu</h1>
+                <h2>Something h<i class="fa fa-fire" style="font-size: 1.5rem"></i>t. Something tasty.</h2>
+            </div>
+            <div class="container content text-center">
+                <div class="row row-cols-2 justify-content-center">
+                </div>
+            </div>
+            <div class="container text-center mt-5">
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#order">
+                    Order Now
+                </button>
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#review">
+                    Review Us
+                </button>
+            </div>
+        </section>
+
+        <footer class="d-flex flex-row justify-content-evenly text-center">
+            <div class="socials container d-flex flex-row align-items-center justify-content-center gap-3 fs-4">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+            <div class="container text-center d-flex align-items-center">Copyright &copy; 2022 |&nbsp; <a href="http://charbeldev.epizy.com" target="_blank">@Charbel.Y</a></div>
+        </footer>
+    </main>
+
+    <div class="modal fade" id="order">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Order Now</h1>
+                    <button class="btn-close"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#order"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="menu-options">
+                            <h4>You order, We serve.</h4>
+                        </label>
+                        <div class="container d-flex flex-column gap-1">
+                            <button class="btn"><i class="fa fa-mobile-phone"></i> Call us</button><br>
+                            <button class="btn"><i class="fa fa-envelope-o"></i> Email us your order</button><br>
+                            <button class="btn"><i class="fab fa-whatsapp"></i> Whatsapp</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="review">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1> Review Us</h1>
+                    <button class="btn-close"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#review"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>We'd love to hear from you.</h2>
+                        <textarea placeholder="Write a comment..." style="resize:none;" class="p-3" cols="30" rows="3"></textarea>
+                        <div id="stars"></div>
+                    </div>
+                    <div class="modal-footer"><button id="submit" data-bs-dismiss="modal" data-bs-target="#review" class="btn btn-light" type="button">Submit</button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

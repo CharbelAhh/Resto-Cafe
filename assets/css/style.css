@@ -1,0 +1,185 @@
+:root{
+    --theme-color:#9d6b55;
+}
+body{
+    overflow-x: hidden;
+}
+header.nav {
+    background:transparent;
+    filter: drop-shadow(1px 1px 50px black);
+    transition: .5s ease;
+}
+
+header ul li{
+    list-style: none;
+    align-items: center;
+    padding-left:5px;
+    padding-right:4px;
+}
+header .nav-lg ul li:not(:first-child){
+    background-image: linear-gradient(white,white);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1px 100%;
+}
+
+header ul li a.active{
+    border:none;
+    color:var(--theme-color);
+    background:white;
+}
+header ul li a{
+    color:white;
+    border-radius: 0;
+    transition: .2s ease;
+    text-decoration: none;
+    padding:10px;
+}
+header ul li a:not(.active):hover{
+    text-decoration: underline;
+    color:white;
+}
+
+main #home {
+    background-image: url("../media/coffee-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height:100vh;
+}
+@keyframes popIn{
+    from{
+        transform: scaleY(0%);
+    }
+    to{
+        transform: scaleY(100%);
+    }
+}
+main section .title{
+    color:white;
+    animation: .7s popIn forwards;
+}
+main section .title h1{
+    font-weight: bold;
+    font-size: 5rem;
+}
+main section .title h2{
+    letter-spacing: 3px;
+}
+main #home a{
+    border-radius: 0 1rem 1rem 1rem;
+
+    background-image: linear-gradient(white,white);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: left;
+
+    transition: all .5s ease;
+}
+main #home a:hover{
+    color:var(--theme-color) !important;
+    background-size:100% 100%;
+}
+
+main #menu {
+    background-color:white;
+    height:100vh;
+}
+main #menu .title{
+    color:var(--theme-color);
+}
+main #menu .title h1{
+    background:var(--theme-color);
+    color:white;
+}
+main #menu .col{
+    color:var(--theme-color);
+}
+main #menu .col h1{
+    font-weight: bold;
+    background-image: linear-gradient(var(--theme-color),var(--theme-color));
+    background-repeat: no-repeat;
+    background-size: 75% 1px;
+    background-position: bottom;
+}
+@keyframes test{
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+main #menu .col h1 i:hover{
+    animation: .7s test infinite;
+}
+main #menu button{
+    background-color: transparent;
+    color:var(--theme-color);
+    border-color:var(--theme-color);
+    border-radius: 0;
+}
+main #menu button:hover{
+    background-color:var(--theme-color);
+    color:white;
+}
+
+.modal-content {
+    color:var(--theme-color) !important;
+    border-color: var(--theme-color) !important;
+}
+.modal-content h1{
+    font-weight: bold;
+    background-image: linear-gradient(var(--theme-color),var(--theme-color));
+    background-repeat:no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
+}
+.modal-content button{
+    background-color:white;
+    color:var(--theme-color);
+    border:1px solid var(--theme-color);
+    border-radius: 0;
+}
+.modal-content button:hover{
+    background-color:var(--theme-color);
+    color:white;
+    border-color:var(--theme-color);
+}
+.modal-content textarea{
+    color:var(--theme-color);
+    outline: none;
+}
+#stars{
+    width:100%;
+    display: flex;
+    justify-content: left;
+    gap:5px;
+}
+#stars button{
+    border:none;
+    outline:none;
+    color:orange;
+    padding:0;
+    margin:0;
+    background-color:transparent;
+    font-size: 1rem;
+}
+
+footer {
+    background-color:var(--theme-color);
+    color:white;
+}
+footer .socials a{
+    color:white;
+}
+footer .socials a:hover{
+    opacity: .5;
+}
